@@ -1,22 +1,20 @@
 from collections import deque
 
-from numpy import double
-
 pila = deque()
 
 # Pedir elementos hasta que usuario ingrese "fin"
 while True:
-    elemento = input("Ingrese un elemento (o 'fin' para terminar): ")
-    elemento = double(elemento)  # Convertir a tipo double
+    elemento = input("Ingrese un numero (escribir 'fin' para terminar): ")
+    elemento = (elemento)
     if elemento == "fin":
         break
     pila.append(elemento)
 
+print("Pila después de apilar elementos:", pila)
 pila_invertida = [ ]
 while pila:
     pila_invertida.append(pila.pop())
 
-print("Pila después de apilar elementos:", pila)
 print("Pila invertida:", pila_invertida)
 
 #Programa para verificar si una palabra es un palindromo
